@@ -6,10 +6,10 @@ This is a MERN stack application for a bookstore. It allows users to browse book
 ## Installation
 To install the necessary dependencies, run the following command:
 
-npm install
+```npm install```
 
 
 ## Usage
 To start the server, run the following command:
 
-npm run dev
+```npm run dev```
