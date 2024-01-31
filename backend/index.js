@@ -3,21 +3,20 @@ import mongoose from "mongoose";
 import { PORT, mongoDBURL } from "./config.js";
 import { Book } from "./models/bookModels.js";
 import bookRoutes from "./routes/bookRoutes.js";
+import cors from "cors";
 
 const app = express(); // create express app
 
 app.use(express.json()); // use express json middleware to parse json body
 
-app.use(cors()); // use cors middleware to allow cross-origin requests
-
-app.use(
-    cors({
-        origin: "http://localhost:3000",
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowHeaders: ['Content-Type'],
-        credentials: true,
-    })
-);
+app.use(cors());
+// app.use(
+//     cors({
+//         origin: "http://localhost:3000",
+//         methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//         allowedHeaders: ["Content-Type"],
+//     })
+// );
 
 
 
